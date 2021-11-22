@@ -8,24 +8,23 @@ public class Movie {
     private String studio;
     private int rating;
 
-    //question: a
+    // question: 1.a
     public Movie(String title, String studio, int rating) {
         this.title = title;
         this.studio = studio;
         this.rating = rating;
     }
 
-    //question: b
+    // question: 1.b
     public Movie(String title, String studio) {
         this.title = title;
         this.studio = studio;
         this.rating = 10;
     }
 
-    //question: c
-    public ArrayList<Movie> getRating(ArrayList<Movie> moviesList)
-    {
-        if (moviesList != null){
+    // question: 1.c
+    public ArrayList<Movie> getRating(ArrayList<Movie> moviesList) {
+        if (moviesList != null) {
             Movie newMovieInstance;
             ArrayList<Movie> newMovieList = new ArrayList<>();
 
@@ -37,7 +36,7 @@ public class Movie {
             }
             return newMovieList;
         } else {
-            return null;
+            return new ArrayList<>();
         }
     }
 
@@ -52,6 +51,16 @@ public class Movie {
 
     public int getMovieRating() {
         return rating;
+    }
+
+    // This is main class
+    public class MainClass {
+        public void main(String[] args) {
+
+            // question: 1.d
+            Movie movie = new Movie("Lion King", "Mossarraf Karim", 10);
+        }
+
     }
 
 }
